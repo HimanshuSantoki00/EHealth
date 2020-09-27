@@ -12,11 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="EH.Entities">
-      <HintPath>..\EH.Entities\bin\Debug\netcoreapp2.1\EH.Entities.dll</HintPath>
-    </Reference>
-    <Reference Include="EH.Repository">
-      <HintPath>..\EH.Repository\bin\Debug\netcoreapp2.1\EH.Repository.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\EH.Repository\EH.Repository.csproj" />
   </ItemGroup>
+  
 </Project>

@@ -12,6 +12,6 @@ namespace EH.Repository.ContactRepo
         Task<IData<DbtoContact>> InActiveContact(int contactId);
         Task<IData<DbtoContact>> UpdateContact(int contactId, Contact contactToUpdate);
         Task<IData<DbtoContact>> DeleteContact(int contactId);
-        
+
     }
 }

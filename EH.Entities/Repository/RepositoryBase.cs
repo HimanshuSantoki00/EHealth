@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +7,6 @@ namespace EH.Entities.Repository
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         protected readonly AppDbContext _dbContext;
-
         public RepositoryBase(AppDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -74,17 +72,5 @@ namespace EH.Entities.Repository
             await _dbContext.SaveChangesAsync();
         }
         #endregion
-
-        public async Task AddRangeAsync(IList<T> entity)
-        {
-            _dbContext.Set<T>().AddRange(entity);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task DeleteRangeAsync(IList<T> entity)
-        {
-            _dbContext.Set<T>().RemoveRange(entity);
-            await _dbContext.SaveChangesAsync();
-        }
     }
 }

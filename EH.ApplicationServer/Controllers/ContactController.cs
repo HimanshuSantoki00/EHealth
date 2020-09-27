@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using EH.ApplicationServer.ApiHelper;
+﻿using EH.ApplicationServer.ApiHelper;
 using EH.Entities.Entities.CustomeEntities;
 using EH.Repository.ContactRepo;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace EH.ApplicationServer.Controllers
 {
@@ -25,7 +25,7 @@ namespace EH.ApplicationServer.Controllers
             var response = await contactRepository.GetAll();
             return response.SendHttpResponse();
         }
-        
+
         [HttpGet]
         [Route("{id:int}")]
         public async Task<IActionResult> Get(int id)

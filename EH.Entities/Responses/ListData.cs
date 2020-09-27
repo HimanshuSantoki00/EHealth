@@ -7,7 +7,6 @@ namespace EH.Entities.Responses
     {
         public IEnumerable<TModel> Model { get; set; }
         public HttpStatusCode StatusCode { get; set; }
-        public bool IsSuccess { get; set; }
         public string ResonseMessage { get; set; }
     }
 }

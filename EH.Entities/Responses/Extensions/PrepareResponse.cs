@@ -7,7 +7,6 @@ namespace EH.Entities.Responses.Extensions
     {
         public static void SendResponse(this IResponse response, bool isSuccess, string msg, HttpStatusCode statusCode = HttpStatusCode.OK, Exception exception = null)
         {
-            response.IsSuccess = isSuccess;
             response.StatusCode = statusCode;
 
             if (!isSuccess)
