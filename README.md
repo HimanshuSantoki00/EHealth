@@ -7,7 +7,7 @@ Visual Studio 2019
 SQL Server Express 
 
 
-## Freamework
+## Framework
 ASP.NET Core 2.1 Framework
 
 
